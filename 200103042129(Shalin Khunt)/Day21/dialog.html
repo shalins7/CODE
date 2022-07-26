@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog</title>
+</head> <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+  $(document).ready(function () {
+    //dialog default
+    $("#dialog").dialog();
+   //dialog animation
+   $( "#dialog1" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  
+
+  });
+  </script>
+<body>
+    <div id ='dialog'>dialog box
+        <p> is the default dialog which is useful for displaying information. 
+            The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>  
+    </div>
+
+    <div id ='dialog1'>dialog box
+        <p> is the default dialog which is useful for displaying information. 
+            The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>  
+    </div>
+    <button id="opener">open this</button>
+</body>
+</html>

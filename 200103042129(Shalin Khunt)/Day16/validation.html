@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        small {
+
+            color: red;
+        }
+
+    </style>
+
+    <script>
+          var nameRegex ='$[a-z][A-Z]';
+          var nameRegex1 ='$[0-9]';
+        $(document).ready(function () {
+//name
+            $("#name").blur(function () {
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#errorname").text("valid name");
+                }
+            });
+
+           $("#name").keypress(function(){
+            $("#errorname").empty();
+              if(! $(this).val().match(nameRegex))
+              {
+                $("#errorname").empty();
+              }
+             else
+             {
+                $("#errorname").text("invalid formate");
+             }
+
+           });
+
+//email           
+            $("#email").blur(function () {
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#erroremail").text("valid id");
+                }
+            });
+
+           $("#email").keypress(function(){
+            $("#erroremail").empty();
+              if(! $(this).val().match(nameRegex))
+              {
+                $("#errorname").empty();
+              }
+             else
+             {
+                $("#errorname").text("invalid formate");
+             }
+
+           });
+//phone
+           $("#phone").blur(function () {
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#erroremail").text("valid id");
+                }
+            });
+
+           $("#phone").keypress(function(){
+            $("#errorphone").empty();
+              if(! $(this).val().match(nameRegex1))
+              {
+                $("#errorphone").empty();
+              }
+             else
+             {
+                $("#errorphone").text("invalid formate");
+             }
+
+           });
+
+//password 
+           $("#password").blur(function () {
+                if ($(this).val() == "" || $(this).val() == null) {
+                    $("#errorpassword").text("valid id");
+                }
+            });
+
+           $("#password").keypress(function(){
+            $("#errorpassword").empty();
+              if(! $(this).val().match(nameRegex))
+              {
+                $("#errorpassword").empty();
+              }
+             else
+             {
+                $("#errorpassword").text("invalid formate");
+             }
+
+           });
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <B>name</B>
+    <input type="text" id="name"><br>
+    
+    <small id="errorname"></small><br>
+
+    <B>email id</B>
+    <input type="text" id="email"><br>
+    <small id="erroremail"></small><br>
+
+    <B>Mobile no.</B>
+    <input type="number" id="phone" maxlength="10"><br>
+    <small id="errorphone"></small><br>
+
+    <B>password</B>
+    <input type="text" id="password"><br>
+    <small id="errorpassword"></small>
+
+    <button id="submit">submit</button>
+
+</body>
+
+</html>

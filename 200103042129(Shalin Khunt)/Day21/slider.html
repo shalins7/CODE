@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>other user interface function</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+      //slider   
+      $("#slider").slider({
+        value: 100,
+        min: 0,
+        max: 500,
+        step: 50,
+        slide: function (event, ui) {
+          $("#amount").val("₹" + ui.value);
+        }
+      });
+      $("#amount").val("₹" + $("#slider").slider("value"));
+
+    });
+  </script>
+</head>
+<body>
+  <label for="amount">amount </label>
+  <input type="text" id="amount">
+  <div id="slider"></div>
+</body>
+</html>

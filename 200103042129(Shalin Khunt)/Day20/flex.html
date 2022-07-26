@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex property</title>
+    <style>
+        /* inline flex*/
+        #container {
+            background-color: black;
+            display: inline-flex;
+        }
+
+        #container>div {
+            background-color: beige;
+            font-size: 50px;
+            padding-left: 20px;
+            margin: 10px;
+        }
+
+        /*flex*/
+        #flex-container {
+            background-color: blue;
+            display: flex;
+        }
+
+        #flex-container>div {
+            background-color: rgb(240, 230, 230);
+            font-size: 20px;
+            padding-left: 20px;
+            margin: 10px;
+        }
+
+        /*flex-direction properties*/
+        #id-container {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        #id-container div {
+            width: 50px;
+            height: 50px;
+        }
+
+        /*flex-direction properties*/
+        #wrap-container {
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            flex-flow: nowrap;
+        }
+
+        #wrap-container div {
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="flex-container">
+        <div>red</div>
+        <div>pink</div>
+        <div>dell</div>
+    </div><br>
+
+    <div id="container">
+        <div>red</div>
+        <div>pink</div>
+        <div>dell</div>
+    </div><br>
+
+    <div id="id-container">
+        <div style=background-color:pink;> ayush</div>
+        <div style=background-color:white;>kunal</div>
+        <div style=background-color:green;>amman</div>
+    </div><br>
+
+    <div id="wrap-container">
+        <div style=background-color:pink;> ayush</div>
+        <div style=background-color:white;>kunal</div>
+        <div style=background-color:green;>amman</div>
+        <div style=background-color:pink;> ayu</div>
+        <div style=background-color:white;>kuu</div>
+        <div style=background-color:green;>ammu</div>
+    </div><br>
+
+
+</body>
+
+</html>

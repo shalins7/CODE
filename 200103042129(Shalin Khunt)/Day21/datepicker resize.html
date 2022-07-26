@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resizable</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        #resize {
+            height: 100px;
+            width: 250px;
+            background-color: rgb(43, 226, 58);
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //resizable
+            $("#resize").resizable();
+            //datepicker
+            $("#datepicker").datepicker();
+            //datepicker functions
+            $("#animation").on("change", function () {
+                $("#datepicker").datepicker("option", "showAnim", $(this).val());
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="resize">
+        <h2>this is a pen....</h2>
+    </div>
+
+    <b>DATE:</b>
+    <input id="datepicker" type="text "><br>
+
+
+    
+    <b> animation</b>
+    <select id="ShowAnim">
+        <option>abc</option>
+        <option>bc</option>
+        <option>a</option>
+    </select>
+</body>
+
+</html>

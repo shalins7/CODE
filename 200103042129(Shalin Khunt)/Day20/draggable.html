@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <style>
+        #list1 {
+            height: 100px;
+            width: 10%;
+            background-color: blueviolet;
+        }
+
+        #list2 {
+            height: 100px;
+            width: 10%;
+            background-color: rgb(28, 28, 29);
+        }
+
+        #list3 {
+            height: 100px;
+            width: 10%;
+            background-color: rgb(141, 226, 43);
+        }
+
+        #list4 {
+            height: 52px;
+            width: 20%;
+            background-color: rgb(43, 226, 202);
+        }
+
+        #list5 {
+            height: 70px;
+            width: 55%;
+            background-color: rgb(155, 149, 161);
+        }
+        #list6 {
+            height: 70px;
+            width: 55%;
+            background-color: rgb(230, 107, 26);
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            //draggable 
+            $("#list1").draggable({ axis: "x" });
+            $("#list2").draggable({ axis: "y" });
+            $("#list3").draggable();
+            $("#list4").draggable({ delay: 3000 });
+            $("#list5 span").draggable({ containment: "#list5" });
+            $("#list6").draggable({ distance: 100 });
+            
+        });
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="list1">list1</div>
+    <hr>
+
+    <div id="list2">list2</div>
+    <hr>
+
+    <div id="list3">list3</div>
+    <hr>
+    <div id="list4">list4</div>
+    <hr>
+    <div id="list5">list5
+        <span>this is list 5...</span>
+    </div>
+    <hr>
+    <div id="list6">list6</div>
+    <hr>
+    
+</body>
+
+</html>
